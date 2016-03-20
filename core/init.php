@@ -3,7 +3,10 @@ session_start();
 //sets up db and cookies
 $GLOBALS['config'] = array (
                             'mysql' => array(
-                                             'host' => '127.0.0.1'
+                                             'host' => '127.0.0.1',
+                                             'username' => 'root',
+                                             'password' => '',
+                                             'db' => 'lr'
                                              ),
                             'remember' => array(
                                                 'cookie_name' => 'hash', 

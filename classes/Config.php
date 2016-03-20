@@ -21,7 +21,7 @@ class Config {
 
             return $config;
         }
-        //if path doesn't exsists return false
+        //if path doesn't exsists return false 
         return false;
     }
 }
