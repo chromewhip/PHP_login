@@ -11,6 +11,12 @@ $GLOBALS['config'] = array (
                                                'session_name' => user)
                         );
 
-spl_autoload_register(function() {
-    
+//creates the library of classes to autoload from
+//i.e '$db= new DB();'' will have DB required by this 
+//function
+spl_autoload_register(function($class) {
+    require_once 'classes/' . $class . 'php';
 });
+
+//can't use spl because it's not a class
+require_once 'functions/sanitize.php';
