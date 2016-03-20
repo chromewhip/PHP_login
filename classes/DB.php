@@ -20,8 +20,8 @@ class DB {
         //connect to DB
         private function __construct() {
             try {
-                 $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
-
+                 $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';port=8889' . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
+echo "connected";
             } catch(PDOException $e) {
                 die($e->getMessage()); 
 
